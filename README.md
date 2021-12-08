@@ -20,8 +20,10 @@ Let's start with Keebio's own [documentation](https://docs.keeb.io/via):
 - VIA Configurator can be used as a no-flash alternative, but does NOT support rotary encoders.
 
 
-QMK it is.
+QMK it is. We'll be referencing the [bdn9 entry in the qmk repo](https://github.com/qmk/qmk_firmware/tree/master/keyboards/keebio/bdn9).
 
 Moving to QMK's [docs](https://docs.qmk.fm/#/newbs_getting_started):
 - Download [QMK Toolbox](https://github.com/qmk/qmk_toolbox)
 - Install QMK and run `qmk setup`
+- Test your environment by running `qmk compile -kb keebio/bdn9/rev2 -km default`. Ensure you see `make --jobs=1 keebio/bdn9/rev2:default` in the output because we have the rev. 2 PCB.
+- Set up build environment (optional)
