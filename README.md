@@ -16,7 +16,7 @@ A 3x3 macropad PCB. See: https://keeb.io/products/bdn9-rev-2-3x3-9-key-macropad-
 The default keymaps are listed [here](https://docs.keeb.io/default-keymaps), but we'll be changing these with QMK.
 
 Let's start with Keebio's own [documentation](https://docs.keeb.io/via):
-- Traditionally, you use QMK Configurator to generate a `.hex`/`.bin` file that is flashed onto the keyboard.
+- Traditionally, you use [QMK Configurator](https://config.qmk.fm/#/keebio/bdn9/rev2/LAYOUT) to generate a `.hex`/`.bin` file that is flashed onto the keyboard.
 - VIA Configurator can be used as a no-flash alternative, but does NOT support rotary encoders.
 
 
@@ -27,3 +27,11 @@ Moving to QMK's [docs](https://docs.qmk.fm/#/newbs_getting_started):
 - Install QMK and run `qmk setup`
 - Test your environment by running `qmk compile -kb keebio/bdn9/rev2 -km default`. Ensure you see `make --jobs=1 keebio/bdn9/rev2:default` in the output because we have the rev. 2 PCB.
 - Set up build environment (optional)
+- Create a custom keymap (in the auto-created git dir with your github name)
+- Compile with `qmk compile -kb keebio/bdn9/rev2 -km byluong` or `qmk compile` if you've set up your qmk config already.
+
+# Flashing
+https://docs.keeb.io/flashing-firmware#stm32-chip 
+- The BDN9 rev. 2 uses a STM32F072 microcontroller which uses a STM32 DFU Bootloader.
+- Load up the .bin file compiled from QMK and press the reset button while your board is plugged in and QMK Toolbox is open. The board should be flashed!
+
