@@ -33,5 +33,6 @@ Moving to QMK's [docs](https://docs.qmk.fm/#/newbs_getting_started):
 # Flashing
 https://docs.keeb.io/flashing-firmware#stm32-chip 
 - The BDN9 rev. 2 uses a STM32F072 microcontroller which uses a STM32 DFU Bootloader.
-- Load up the .bin file compiled from QMK and press the reset button while your board is plugged in and QMK Toolbox is open. The board should be flashed!
+- Load up the .bin file compiled from QMK and _hold_ the reset button while your board is plugged in and QMK Toolbox is open. The board should be flashed!
+- I've included my keymap and config file for future reference.
 
