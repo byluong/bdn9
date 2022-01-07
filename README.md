@@ -27,10 +27,10 @@ Moving to QMK's [docs](https://docs.qmk.fm/#/newbs_getting_started):
 - Install QMK and run `qmk setup`
 - Test your environment by running `qmk compile -kb keebio/bdn9/rev2 -km default`. Ensure you see `make --jobs=1 keebio/bdn9/rev2:default` in the output because we have the rev. 2 PCB.
 - Set up build environment (optional)
-- Create a custom keymap (in the auto-created git dir with your github name)
+- Create a custom keymap (in the auto-created git dir with your github name). For me this was `/home/brandon/qmk_firmware/keyboards/keebio/bdn9/keymaps/byluong/keymap.c`
 - Compile with `qmk compile -kb keebio/bdn9/rev2 -km byluong` or `qmk compile` if you've set up your qmk config already.
 
-# Flashing
+# Flashing with QMK Toolbox
 https://docs.keeb.io/flashing-firmware#stm32-chip 
 - The BDN9 rev. 2 uses a STM32F072 microcontroller which uses a STM32 DFU Bootloader.
 - Load up the .bin file compiled from QMK and _hold_ the reset button while your board is plugged in and QMK Toolbox is open. The board should be flashed!
